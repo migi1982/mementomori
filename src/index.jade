@@ -12,10 +12,11 @@ html(ng-app="app")
     link(rel="stylesheet", href="lib/ui-layout.css", type="text/css")
     link(rel="stylesheet", href="css/main.css", type="text/css")
   body(ng-controller="appCtrl")
-    div(ng-http-loader,template="modules/common/parts/_loadingParts.html")
+    div(ng-http-loader,template="modules/common/parts/_loading.html")
     alert-msg
     nav
     div(ng-view)
+    pre {{hoge}}
 
     script(src="lib/angular.min.js")
     script(src="lib/angular-route.min.js")
@@ -26,4 +27,6 @@ html(ng-app="app")
     script(src="lib/c3.min.js")
 
     script(src="modules/app.js")
+    script(src="modules/common/services.js")
+    script(src="modules/common/filters.js")
     script(src="modules/common/appCtrl.js")
