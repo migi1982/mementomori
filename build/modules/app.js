@@ -5,7 +5,7 @@
 
   routeConfig = [
     '$routeProvider', function($routeProvider) {
-      $routeProvider.when('/login/', {
+      $routeProvider.when('/', {
         controller: 'topCtrl',
         templateUrl: 'modules/top/topPanel.html',
         resolve: {

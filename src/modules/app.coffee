@@ -10,7 +10,7 @@ routeConfig = [
   '$routeProvider'
   ($routeProvider)->
     $routeProvider
-      .when '/login/', {
+      .when '/', {
         controller: 'topCtrl',
         templateUrl: 'modules/top/topPanel.html'
         resolve: {

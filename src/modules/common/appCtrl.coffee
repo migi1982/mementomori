@@ -2,6 +2,7 @@ appCtrl = [
   '$scope'
   ($scope)->
     $scope.hoge = 'fuga'
+
     return
 ]
 

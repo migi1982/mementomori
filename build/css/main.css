@@ -1,2 +1,66 @@
 body {
   margin: 0; }
+
+.icons svg {
+  margin-right: 5px; }
+
+.die circle, .die polygon, .die path {
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-name: die;
+          animation-name: die;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  opacity: 0; }
+
+@-webkit-keyframes die {
+  0% {
+    opacity: 1;
+    fill: #000;
+    trasnform: scale(1); }
+
+  50% {
+    opacity: 1;
+    fill: #F00;
+    trasnform: scale(2); }
+
+  80% {
+    opacity: 1;
+    fill: #F00;
+    trasnform: scale(2); }
+
+  100% {
+    opacity: 0;
+    fill: #F00;
+    trasnform: scale(2); } }
+
+@keyframes die {
+  0% {
+    opacity: 1;
+    fill: #000;
+    trasnform: scale(1); }
+
+  50% {
+    opacity: 1;
+    fill: #F00;
+    trasnform: scale(2); }
+
+  80% {
+    opacity: 1;
+    fill: #F00;
+    trasnform: scale(2); }
+
+  100% {
+    opacity: 0;
+    fill: #F00;
+    trasnform: scale(2); } }
+
+p.full {
+  width: 100%; }

@@ -1,0 +1,48 @@
+form
+  select(ng-model="age",ng-change="setIcon()")
+    option(value="0") 0〜4歳
+    option(value="1") 5〜9歳
+    option(value="2") 10〜14歳
+    option(value="3") 15〜19歳
+    option(value="4") 20〜24歳
+    option(value="5") 25〜29歳
+    option(value="6") 30〜34歳
+    option(value="7") 35〜39歳
+    option(value="8") 40〜44歳
+    option(value="9") 45〜49歳
+    option(value="10") 50〜54歳
+    option(value="11") 55〜59歳
+    option(value="12") 60〜64歳
+    option(value="13") 65〜69歳
+    option(value="14") 70〜74歳
+    option(value="15") 75〜79歳
+    option(value="16") 80〜84歳
+    option(value="17") 85〜89歳
+    option(value="18") 90〜94歳
+    option(value="19") 95〜99歳
+    option(value="20") 100歳〜
+  select(ng-model="sex",ng-change="setIcon()")
+    //- option(value="both") both
+    option(value="male") male
+    option(value="female") female
+
+div(ng-show="age&&sex")
+  p あなたは{{rate[age][sex]}}%の確率で今年死亡します。
+  p あなたの世代の{{number[age][sex]|number}}人に1人の確率です。
+  p この数字は統計局の人口動態調査の結果を元にした事実です。
+
+  //- .icons
+    img(ng-src="img/icon/{{sex}}.svg",width="15",height="15",ng-repeat="item in icons",ng-class="{'die':item.die}")
+  //- p.full
+  //-   span(ng-repeat="item in icons",ng-class="{'die':item==target}") ●&nbsp;
+  .icons(ng-show="sex=='female'")
+    svg(width="10",height="17",viewBox="0 0 40 68",ng-repeat="item in icons",ng-class="{'die':item.die}")
+      g(fill="#000")
+        circle(cx="20",cy="10",r="10")
+        polygon(points="20 42 40 68 0 68")
+        polygon(transform="translate(20.000000, 33.500000) scale(1, -1) translate(-20.000000, -33.500000) " points="20 25 34 42 6 42 ")
+  .icons(ng-show="sex=='male'")
+    svg(width="10",height="22",viewBox="0 0 30 67",ng-repeat="item in icons",ng-class="{'die':item.die}")
+      g(fill="#000")
+        circle(cx="15",cy="10",r="10")
+        path(d="M0,36 L0,23 L23.5,23 L30,23 L30,67 L19,67 L19,49 L11,49 L11,67 L0,67 L0,36 Z")

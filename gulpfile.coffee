@@ -71,16 +71,16 @@ gulp.task 'jade', ->
 # images
 gulp.task 'images', ->
   console.log '---------- images task ----------'
-  gulp.src 'src/assets/images/**/*'
-    .pipe gulp.dest baseDir + 'images/'
+  gulp.src 'src/assets/img/**/*'
+    .pipe gulp.dest baseDir + 'img/'
 
 # data
 gulp.task 'data', ->
   console.log '---------- data task ----------'
-  gulp.src 'src/data/*'
+  gulp.src 'src/assets/data/*'
     .pipe(jsonlint())
     .pipe(jsonlint.reporter())
-    .pipe gulp.dest baseDir + 'data'
+    .pipe gulp.dest baseDir + 'data/'
 
 # lib
 gulp.task 'lib', ->
