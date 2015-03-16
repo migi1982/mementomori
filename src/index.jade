@@ -12,8 +12,14 @@ html(ng-app="app")
     link(rel="stylesheet", href="lib/ui-layout.css", type="text/css")
     link(rel="stylesheet", href="css/main.css", type="text/css")
   body(ng-controller="appCtrl")
-    div(ng-http-loader,template="modules/common/parts/_loading.html")
     nav
+      ul
+        li
+          a(href="/#/") トップ
+        li
+          a(href="/#/transition") 年齢別死因割合の遷移
+        li
+          a(href="/#/about") このサイトについて
     div(ng-view)
 
     script(src="lib/angular.min.js")

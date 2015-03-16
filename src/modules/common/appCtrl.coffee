@@ -5,8 +5,6 @@ appCtrl = [
 
     return
 ]
-navParts = ->
-  templateUrl: 'modules/common/parts/_nav.html'
 
 
 
@@ -16,4 +14,3 @@ navParts = ->
 angular
   .module 'app'
   .controller 'appCtrl',appCtrl
-  .directive 'nav', navParts
