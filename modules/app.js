@@ -13,6 +13,22 @@
             return $rootScope.currentPage = 'top';
           }
         }
+      }).when('/transition', {
+        controller: 'transitionCtrl',
+        templateUrl: 'modules/transition/transitionPanel.html',
+        resolve: {
+          current: function($rootScope) {
+            return $rootScope.currentPage = 'transition';
+          }
+        }
+      }).when('/about', {
+        controller: 'aboutCtrl',
+        templateUrl: 'modules/about/aboutPanel.html',
+        resolve: {
+          current: function($rootScope) {
+            return $rootScope.currentPage = 'about';
+          }
+        }
       }).otherwise({
         redirectTo: '/'
       });

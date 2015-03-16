@@ -1,89 +1,253 @@
 [{
-    "both": 99,
-    "male": 92,
-    "female": 105
+    "label": "0〜4歳",
+    "rate": {
+        "both": 0.057,
+        "male": 0.0609,
+        "female": 0.053
+    },
+    "num": {
+        "both": 1754,
+        "male": 1642,
+        "female": 1886
+    }
 }, {
-    "both": 1754,
-    "male": 1642,
-    "female": 1886
+    "label": "5〜9歳",
+    "rate": {
+        "both": 0.0085,
+        "male": 0.0099,
+        "female": 0.0071
+    },
+    "num": {
+        "both": 11764,
+        "male": 10101,
+        "female": 14084
+    }
 }, {
-    "both": 11764,
-    "male": 10101,
-    "female": 14084
+    "label": "10〜14歳",
+    "rate": {
+        "both": 0.0081,
+        "male": 0.0096,
+        "female": 0.0065
+    },
+    "num": {
+        "both": 12345,
+        "male": 10416,
+        "female": 15384
+    }
 }, {
-    "both": 12345,
-    "male": 10416,
-    "female": 15384
+    "label": "15〜19歳",
+    "rate": {
+        "both": 0.0212,
+        "male": 0.0286,
+        "female": 0.0135
+    },
+    "num": {
+        "both": 4716,
+        "male": 3496,
+        "female": 7407
+    }
 }, {
-    "both": 4716,
-    "male": 3496,
-    "female": 7407
+    "label": "20〜24歳",
+    "rate": {
+        "both": 0.0404,
+        "male": 0.056,
+        "female": 0.0238
+    },
+    "num": {
+        "both": 2475,
+        "male": 1785,
+        "female": 4201
+    }
 }, {
-    "both": 2475,
-    "male": 1785,
-    "female": 4201
+    "label": "25〜29歳",
+    "rate": {
+        "both": 0.0434,
+        "male": 0.059,
+        "female": 0.0271
+    },
+    "num": {
+        "both": 2304,
+        "male": 1694,
+        "female": 3690
+    }
 }, {
-    "both": 2304,
-    "male": 1694,
-    "female": 3690
+    "label": "30〜34歳",
+    "rate": {
+        "both": 0.0526,
+        "male": 0.067,
+        "female": 0.0377
+    },
+    "num": {
+        "both": 1901,
+        "male": 1492,
+        "female": 2652
+    }
 }, {
-    "both": 1901,
-    "male": 1492,
-    "female": 2652
+    "label": "35〜39歳",
+    "rate": {
+        "both": 0.0722,
+        "male": 0.0919,
+        "female": 0.052
+    },
+    "num": {
+        "both": 1385,
+        "male": 1088,
+        "female": 1923
+    }
 }, {
-    "both": 1385,
-    "male": 1088,
-    "female": 1923
+    "label": "40〜44歳",
+    "rate": {
+        "both": 0.1064,
+        "male": 0.1349,
+        "female": 0.077
+    },
+    "num": {
+        "both": 939,
+        "male": 741,
+        "female": 1298
+    }
 }, {
-    "both": 939,
-    "male": 741,
-    "female": 1298
+    "label": "45〜49歳",
+    "rate": {
+        "both": 0.1697,
+        "male": 0.2165,
+        "female": 0.1221
+    },
+    "num": {
+        "both": 589,
+        "male": 461,
+        "female": 819
+    }
 }, {
-    "both": 589,
-    "male": 461,
-    "female": 819
+    "label": "50〜54歳",
+    "rate": {
+        "both": 0.2695,
+        "male": 0.3527,
+        "female": 0.1858
+    },
+    "num": {
+        "both": 371,
+        "male": 283,
+        "female": 538
+    }
 }, {
-    "both": 371,
-    "male": 283,
-    "female": 538
+    "label": "55〜59歳",
+    "rate": {
+        "both": 0.4096,
+        "male": 0.558,
+        "female": 0.2628
+    },
+    "num": {
+        "both": 244,
+        "male": 179,
+        "female": 380
+    }
 }, {
-    "both": 244,
-    "male": 179,
-    "female": 380
+    "label": "60〜64歳",
+    "rate": {
+        "both": 0.655,
+        "male": 0.9258,
+        "female": 0.3944
+    },
+    "num": {
+        "both": 152,
+        "male": 108,
+        "female": 253
+    }
 }, {
-    "both": 152,
-    "male": 108,
-    "female": 253
+    "label": "65〜69歳",
+    "rate": {
+        "both": 0.9533,
+        "male": 1.3715,
+        "female": 0.5658
+    },
+    "num": {
+        "both": 104,
+        "male": 72,
+        "female": 176
+    }
 }, {
-    "both": 104,
-    "male": 72,
-    "female": 176
+    "label": "70〜74歳",
+    "rate": {
+        "both": 1.4734,
+        "male": 2.1248,
+        "female": 0.9059
+    },
+    "num": {
+        "both": 67,
+        "male": 47,
+        "female": 110
+    }
 }, {
-    "both": 67,
-    "male": 47,
-    "female": 110
+    "label": "75〜79歳",
+    "rate": {
+        "both": 2.5689,
+        "male": 3.6836,
+        "female": 1.6927
+    },
+    "num": {
+        "both": 38,
+        "male": 27,
+        "female": 59
+    }
 }, {
-    "both": 38,
-    "male": 27,
-    "female": 59
+    "label": "80〜84歳",
+    "rate": {
+        "both": 4.7211,
+        "male": 6.7592,
+        "female": 3.3816
+    },
+    "num": {
+        "both": 21,
+        "male": 14,
+        "female": 29
+    }
 }, {
-    "both": 21,
-    "male": 14,
-    "female": 29
+    "label": "85〜89歳",
+    "rate": {
+        "both": 8.3634,
+        "male": 11.6406,
+        "female": 6.7425
+    },
+    "num": {
+        "both": 11,
+        "male": 8,
+        "female": 14
+    }
 }, {
-    "both": 11,
-    "male": 8,
-    "female": 14
+    "label": "90〜94歳",
+    "rate": {
+        "both": 14.6242,
+        "male": 19.4592,
+        "female": 13.1739
+    },
+    "num": {
+        "both": 6,
+        "male": 5,
+        "female": 7
+    }
 }, {
-    "both": 6,
-    "male": 5,
-    "female": 7
+    "label": "95〜99歳",
+    "rate": {
+        "both": 24.9363,
+        "male": 30.9806,
+        "female": 23.5979
+    },
+    "num": {
+        "both": 4,
+        "male": 3,
+        "female": 4
+    }
 }, {
-    "both": 4,
-    "male": 3,
-    "female": 4
-}, {
-    "both": 2,
-    "male": 2,
-    "female": 2
+    "label": "100歳〜",
+    "rate": {
+        "both": 39.9618,
+        "male": 46.4143,
+        "female": 39.0208
+    },
+    "num": {
+        "both": 2,
+        "male": 2,
+        "female": 2
+    }
 }]
