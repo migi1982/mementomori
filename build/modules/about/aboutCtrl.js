@@ -1,7 +1,11 @@
 (function() {
   var aboutCtrl;
 
-  aboutCtrl = ['$scope', function($scope) {}];
+  aboutCtrl = [
+    '$rootScope', '$scope', function($rootScope, $scope) {
+      $rootScope.navShow = true;
+    }
+  ];
 
   angular.module('app').controller('aboutCtrl', aboutCtrl);
 

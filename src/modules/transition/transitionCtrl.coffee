@@ -1,9 +1,12 @@
 transitionCtrl = [
+  '$rootScope'
   '$scope'
   'dataService'
   'd3Service'
-  ($scope,dataService,d3Service)->
+  ($rootScope,$scope,dataService,d3Service)->
     data30 = data31 = null
+    $rootScope.navShow = true
+    $scope.type = 'spline'
 
     dataService('30').then (res)->
       data30 = res
@@ -30,6 +33,19 @@ transitionCtrl = [
             x: {
                 type: 'category',
             }
+            y: {
+                min: 0,
+            }
+        }
+        size: {
+            height: 400
+            width: 720
+        }
+        padding: {
+            bottom: 20,
+        },
+        legend: {
+            # position: 'right'
         }
       }
       return
@@ -46,6 +62,7 @@ transitionCtrl = [
         else
           data = data31
         updateChart(data,str)
+        $scope.type = str
       return
 
     return

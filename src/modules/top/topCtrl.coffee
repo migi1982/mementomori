@@ -1,11 +1,12 @@
 topCtrl = [
+  '$rootScope'
   '$scope'
   '$timeout'
   'dataService'
   'd3Service'
   'util'
-  ($scope,$timeout,dataService,d3Service,util)->
-    $scope.textShow = false
+  ($rootScope,$scope,$timeout,dataService,d3Service,util)->
+    $scope.showDiv = 'h1'
     data10 = data20 = null
     d3 = d3Service.d3
     c3 = d3Service.c3
@@ -16,8 +17,19 @@ topCtrl = [
     dataService('20').then (res)->
       data20 = res
       return
-    $scope.setData = ()->
+
+    $timeout ->
+      $scope.h1Fadeout = true
+      $timeout ->
+        $scope.showDiv = 'q'
+      , 1000
+    , 3000
+    # $scope.showDiv = 'a'
+    # $rootScope.navShow = true
+
+    $scope.setData = ->
       if $scope.myAge >= 0 && $scope.mySex
+        console.log 'set!'
         # data10のインデックス
         index10 = ($scope.myAge / 5) << 0
         if index10 > 20
@@ -31,7 +43,8 @@ topCtrl = [
         $scope.rateData = data10[index10]
         $scope.rankData = data20[index20]
         setDonut($scope.rankData[$scope.mySex])
-        $scope.textShow = true
+        $scope.showDiv = 'a'
+        $rootScope.navShow = true
       return
 
     setDonut = (data)->
@@ -47,6 +60,10 @@ topCtrl = [
         }
         donut: {
           title: '上位の死因'
+        }
+        size: {
+            height: 240
+            width: 480
         }
       }
       return

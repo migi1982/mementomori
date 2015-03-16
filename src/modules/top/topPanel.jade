@@ -1,34 +1,28 @@
-form
-  input(type="number",ng-model="myAge")
-  select(ng-model="mySex")
-    option(value="male") male
-    option(value="female") female
-  //- ul
-  //-   li(ng-click="mySex='male'") male
-  //-   li(ng-click="mySex='female'") female
-  .btn.btn-primary(ng-click="setData()") 進む
+.top
+  .top-h1(ng-if="showDiv=='h1'")
+    h1.fadein(ng-class="{'fadeout':h1Fadeout}") How We Die?
 
-div(ng-show="textShow")
-  p あなたは<span class="caution">{{rateData.rate[mySex]}}%</span>の確率で今年死亡します。
-  p これは、同世代の<span class="caution">{{rateData.num[mySex]|number}}人</span>に1人の確率です。
-  p 死亡者の多くは<span class="caution">{{rankData[mySex][0].name}}</span>で死亡しています。
-  p この数字は統計局の人口動態調査の結果を元にした事実です。
+  .top-main.fadein(ng-show="showDiv!='h1'")
+    .top-main-q(ng-show="showDiv=='q'")
+      p あなたの年齢と性別を教えてください
+      form.form-group.flc
+        input.form-control(type="number",ng-model="myAge",placeholder="年齢")
+        .icon-sex.icon-male(ng-class="{on:mySex=='male'}",ng-click="mySex='male'")
+          svg(width="21px",height="36px",viewBox="0 0 43 72")
+            g(fill-rule="evenodd",fill="none")
+              path(d="M21.5,1.53422455 L21.5,1.53422455 L35.5,25.5 L21.5,1.53422455 L21.5,1.5 L21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 L7.5,25.5 L21.5,1.53422455 L21.5,1.53422455 Z M21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 L21.5,31.0677185 L21.5,1.53422455 L21.5,1.53422455 L21.5,1.53422455 Z M21.5,1.53422455 L21.5199928,1.5 L21.5,1.53422455 L21.5,1.53422455 Z M21.5,71 C32.2695526,71 41,62.2695526 41,51.5 C41,40.7304474 32.2695526,32 21.5,32 C10.7304474,32 2,40.7304474 2,51.5 C2,62.2695526 10.7304474,71 21.5,71 Z",stroke-width="3",stroke-linecap="round",stroke-linejoin="bevel",stroke="#FFFFFF")
+        .icon-sex.icon-female(ng-class="{on:mySex=='female'}",ng-click="mySex='female'")
+          svg(width="21px",height="36px",viewBox="0 0 43 72")
+            g(fill-rule="evenodd",fill="none")
+              path(d="M21.5,61.5 L9.5,61.5 L21.5,61.5 L21.5,41.5 L21.5,61.5 Z M21.5,61.5 L34.5199928,61.5 L21.5,61.5 L21.5,71.0677185 L21.5,61.5 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z",stroke-width="3",stroke-linecap="round",stroke-linejoin="bevel",stroke="#FFFFFF")
+      .btn.btn-primary.btn-lg(ng-click="setData()") 先に進む
 
-#chart
+    .top-main-a(ng-show="showDiv=='a'")
+      p あなたは今年<span class="caution">{{rateData.rate[mySex]}}%</span>の確率で死亡します。
+      p これは同世代の<span class="caution">{{rateData.num[mySex]|number}}人</span>に1人の確率です。
+      p 死亡者の多くは<span class="caution">{{rankData[mySex][0].name}}</span>で死亡しています。
+      p この数字は統計局の人口動態調査の結果を元にした事実です。
 
+      #chart.top-chart
 
-  //- .icons
-    img(ng-src="img/icon/{{sex}}.svg",width="15",height="15",ng-repeat="item in icons",ng-class="{'die':item.die}")
-  //- p.full
-  //-   span(ng-repeat="item in icons",ng-class="{'die':item==target}") ●&nbsp;
-  //- .icons(ng-show="sex=='female'")
-    svg(width="10",height="17",viewBox="0 0 40 68",ng-repeat="item in icons",ng-class="{'die':item.die}")
-      g(fill="#000")
-        circle(cx="20",cy="10",r="10")
-        polygon(points="20 42 40 68 0 68")
-        polygon(transform="translate(20.000000, 33.500000) scale(1, -1) translate(-20.000000, -33.500000) " points="20 25 34 42 6 42 ")
-  //- .icons(ng-show="sex=='male'")
-    svg(width="10",height="22",viewBox="0 0 30 67",ng-repeat="item in icons",ng-class="{'die':item.die}")
-      g(fill="#000")
-        circle(cx="15",cy="10",r="10")
-        path(d="M0,36 L0,23 L23.5,23 L30,23 L30,67 L19,67 L19,49 L11,49 L11,67 L0,67 L0,36 Z")
+      .btn.btn-default(ng-click="showDiv='q'") 別の年齢・性別でためす

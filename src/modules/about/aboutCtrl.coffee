@@ -1,6 +1,8 @@
 aboutCtrl = [
+  '$rootScope'
   '$scope'
-  ($scope)->
+  ($rootScope,$scope)->
+    $rootScope.navShow = true
     return
 ]
 

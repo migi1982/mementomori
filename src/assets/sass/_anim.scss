@@ -1,0 +1,34 @@
+.fadein {
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  animation-name: "fadein";
+  animation-duration: 2s;
+  opacity: 1;
+}
+.fadeout {
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  animation-name: "fadeout";
+  animation-duration: 1s;
+  opacity: 0;
+}
+@keyframes "fadein" {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes "fadeout" {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

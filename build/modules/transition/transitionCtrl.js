@@ -2,9 +2,11 @@
   var transitionCtrl;
 
   transitionCtrl = [
-    '$scope', 'dataService', 'd3Service', function($scope, dataService, d3Service) {
+    '$rootScope', '$scope', 'dataService', 'd3Service', function($rootScope, $scope, dataService, d3Service) {
       var chart, data30, data31, setChart, updateChart;
       data30 = data31 = null;
+      $rootScope.navShow = true;
+      $scope.type = 'spline';
       dataService('30').then(function(res) {
         data30 = res;
       });
@@ -28,8 +30,19 @@
           axis: {
             x: {
               type: 'category'
+            },
+            y: {
+              min: 0
             }
-          }
+          },
+          size: {
+            height: 400,
+            width: 720
+          },
+          padding: {
+            bottom: 20
+          },
+          legend: {}
         });
       };
       updateChart = function(data, type) {
@@ -47,6 +60,7 @@
             data = data31;
           }
           updateChart(data, str);
+          $scope.type = str;
         }
       };
     }

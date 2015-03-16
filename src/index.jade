@@ -11,15 +11,18 @@ html(ng-app="app")
     link(rel="stylesheet", href="lib/bootstrap.min.css", type="text/css")
     link(rel="stylesheet", href="lib/ui-layout.css", type="text/css")
     link(rel="stylesheet", href="css/main.css", type="text/css")
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700', type='text/css')
   body(ng-controller="appCtrl")
-    nav
+    nav(ng-if="navShow")
+      h1
+        a(href="#/") How We Die?
       ul
         li
-          a(href="/#/") トップ
+          a(href="#/") トップ
         li
-          a(href="/#/transition") 年齢別死因割合の遷移
+          a(href="#/transition") 年齢別死因割合の遷移
         li
-          a(href="/#/about") このサイトについて
+          a(href="#/about") このサイトについて
     div(ng-view)
 
     script(src="lib/angular.min.js")

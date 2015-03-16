@@ -1,8 +1,8 @@
 appCtrl = [
+  '$rootScope'
   '$scope'
-  ($scope)->
-    $scope.hoge = 'fuga'
-
+  ($rootScope,scope)->
+    $rootScope.navShow = false
     return
 ]
 
