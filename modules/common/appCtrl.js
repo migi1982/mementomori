@@ -1,5 +1,5 @@
 (function() {
-  var appCtrl, navParts;
+  var appCtrl;
 
   appCtrl = [
     '$scope', function($scope) {
@@ -7,12 +7,6 @@
     }
   ];
 
-  navParts = function() {
-    return {
-      templateUrl: 'modules/common/parts/_nav.html'
-    };
-  };
-
-  angular.module('app').controller('appCtrl', appCtrl).directive('nav', navParts);
+  angular.module('app').controller('appCtrl', appCtrl);
 
 }).call(this);
