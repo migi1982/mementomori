@@ -2,8 +2,8 @@
   var appCtrl;
 
   appCtrl = [
-    '$scope', function($scope) {
-      $scope.hoge = 'fuga';
+    '$rootScope', '$scope', function($rootScope, scope) {
+      $rootScope.navShow = false;
     }
   ];
 
