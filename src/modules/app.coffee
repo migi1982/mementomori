@@ -18,6 +18,22 @@ routeConfig = [
             $rootScope.currentPage = 'top'
         }
       }
+      .when '/transition', {
+        controller: 'transitionCtrl',
+        templateUrl: 'modules/transition/transitionPanel.html'
+        resolve: {
+          current: ($rootScope)->
+            $rootScope.currentPage = 'transition'
+        }
+      }
+      .when '/about', {
+        controller: 'aboutCtrl',
+        templateUrl: 'modules/about/aboutPanel.html'
+        resolve: {
+          current: ($rootScope)->
+            $rootScope.currentPage = 'about'
+        }
+      }
       .otherwise {
         redirectTo: '/'
       }

@@ -1,5 +1,5 @@
 (function() {
-  var dataService, util;
+  var d3Service, dataService, util;
 
   util = function() {
     var rnd;
@@ -33,6 +33,13 @@
     }
   ];
 
-  angular.module('services', ['ngRoute']).service('dataService', dataService).service('util', util);
+  d3Service = function() {
+    return {
+      d3: d3,
+      c3: c3
+    };
+  };
+
+  angular.module('services', ['ngRoute']).service('dataService', dataService).service('util', util).service('d3Service', d3Service);
 
 }).call(this);

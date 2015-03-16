@@ -1,0 +1,9 @@
+.test
+  p 各年代の死因の割合
+
+  ul
+    li(ng-click="changeType('spline')",ng-class="{on:type=='spline'}") 割合
+    li(ng-click="changeType('line')",ng-class="{on:type=='spline'}") 絶対数
+
+
+  #chart

@@ -27,9 +27,16 @@ dataService = [
       delay.promise
 ]
 
+d3Service = ->
+  {
+    d3:d3
+    c3:c3
+  }
+
 
 
 angular
   .module 'services', ['ngRoute']
   .service 'dataService', dataService
   .service 'util', util
+  .service 'd3Service', d3Service

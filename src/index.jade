@@ -13,7 +13,6 @@ html(ng-app="app")
     link(rel="stylesheet", href="css/main.css", type="text/css")
   body(ng-controller="appCtrl")
     div(ng-http-loader,template="modules/common/parts/_loading.html")
-    alert-msg
     nav
     div(ng-view)
 
@@ -30,3 +29,5 @@ html(ng-app="app")
     script(src="modules/common/filters.js")
     script(src="modules/common/appCtrl.js")
     script(src="modules/top/topCtrl.js")
+    script(src="modules/transition/transitionCtrl.js")
+    script(src="modules/about/aboutCtrl.js")
