@@ -1,8 +1,10 @@
 aboutCtrl = [
   '$rootScope'
   '$scope'
-  ($rootScope,$scope)->
-    $rootScope.navShow = true
+  'showService'
+  ($rootScope,$scope,showService)->
+    showService.toggle('nav',true)
+    showService.toggle('amazon',true)
     return
 ]
 

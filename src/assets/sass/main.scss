@@ -53,6 +53,14 @@ nav {
   }
 }
 
+h1.fadein {
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(255, 255, 255, .6);
+  margin-top: 300px;
+  font-size: 100px;
+}
 
 .caution {
   color: #B21717;
@@ -61,14 +69,6 @@ nav {
   margin: 0 5px;
 }
 .top {
-  h1 {
-    font-family: 'Cabin Sketch', cursive;
-    font-weight: 700;
-    text-align: center;
-    color: rgba(255, 255, 255, .6);
-    margin-top: 300px;
-    font-size: 100px;
-  }
   .top-main {
     width: 800px;
     padding: 40px;

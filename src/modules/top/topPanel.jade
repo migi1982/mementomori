@@ -1,9 +1,6 @@
 .top
-  .top-h1(ng-if="showDiv=='h1'")
-    h1.fadein(ng-class="{'fadeout':h1Fadeout}") How We Die?
-
-  .top-main.fadein(ng-show="showDiv!='h1'")
-    .top-main-q(ng-show="showDiv=='q'")
+  .top-main.fadein
+    .top-main-q(ng-show="show.topQ")
       p あなたの年齢と性別を教えてください
       form.form-group.flc
         input.form-control(type="number",ng-model="myAge",placeholder="年齢")
@@ -17,7 +14,7 @@
               path(d="M21.5,61.5 L9.5,61.5 L21.5,61.5 L21.5,41.5 L21.5,61.5 Z M21.5,61.5 L34.5199928,61.5 L21.5,61.5 L21.5,71.0677185 L21.5,61.5 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z",stroke-width="3",stroke-linecap="round",stroke-linejoin="bevel",stroke="#FFFFFF")
       .btn.btn-primary.btn-lg(ng-click="setData()",ng-disabled="myAge<0||!mySex") 先に進む
 
-    .top-main-a(ng-show="showDiv=='a'")
+    .top-main-a(ng-show="show.topA")
       p あなたは今年<span class="caution">{{rateData.rate[mySex]}}%</span>の確率で死亡します。
       p これは同世代の<span class="caution">{{rateData.num[mySex]|number}}人</span>に1人の確率です。
       p 死亡者の多くは<span class="caution">{{rankData[mySex][0].name}}</span>で死亡しています。
@@ -25,4 +22,8 @@
 
       #chart.top-chart
 
-      .btn.btn-default(ng-click="showDiv='q'") 大切な人の年齢・性別でためす
+      .btn.btn-default(ng-click="showQ()") 大切な人の年齢・性別でためす
+
+      a.twitter-share-button(href="https://twitter.com/share",data-text="私は今年、1/{{rateData.num[mySex]|number}}の確率で死にます。死因はおそらく{{rankData[mySex][0].name}}です。" data-count="none",data-hashtags="HowWeDie") Tweet
+      script.
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

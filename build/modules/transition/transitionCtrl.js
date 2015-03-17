@@ -2,10 +2,11 @@
   var transitionCtrl;
 
   transitionCtrl = [
-    '$rootScope', '$scope', 'dataService', 'd3Service', function($rootScope, $scope, dataService, d3Service) {
+    '$rootScope', '$scope', 'dataService', 'd3Service', 'showService', function($rootScope, $scope, dataService, d3Service, showService) {
       var chart, data30, data31, setChart, updateChart;
+      showService.toggle('nav', true);
+      showService.toggle('amazon', true);
       data30 = data31 = null;
-      $rootScope.navShow = true;
       $scope.type = 'spline';
       dataService('30').then(function(res) {
         data30 = res;

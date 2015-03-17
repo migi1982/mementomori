@@ -3,9 +3,12 @@ transitionCtrl = [
   '$scope'
   'dataService'
   'd3Service'
-  ($rootScope,$scope,dataService,d3Service)->
+  'showService'
+  ($rootScope,$scope,dataService,d3Service,showService)->
+    showService.toggle('nav',true)
+    showService.toggle('amazon',true)
+
     data30 = data31 = null
-    $rootScope.navShow = true
     $scope.type = 'spline'
 
     dataService('30').then (res)->

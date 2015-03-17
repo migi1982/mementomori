@@ -27,6 +27,21 @@ dataService = [
       delay.promise
 ]
 
+showService = [
+  '$rootScope'
+  ($rootScope)->
+    $rootScope.show = {}
+    toggle = (str,bool)->
+      if bool?
+        $rootScope.show[str] = bool
+      else
+        $rootScope.show[str] = !$rootScope.show[str]
+      return
+    return {
+      toggle: toggle
+    }
+]
+
 d3Service = ->
   {
     d3:d3
@@ -40,3 +55,4 @@ angular
   .service 'dataService', dataService
   .service 'util', util
   .service 'd3Service', d3Service
+  .service 'showService', showService

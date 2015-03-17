@@ -14,7 +14,7 @@ html(ng-app="app")
     link(rel="stylesheet", href="css/main.css", type="text/css")
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700', type='text/css')
   body(ng-controller="appCtrl")
-    nav(ng-if="navShow")
+    nav(ng-if="show.nav")
       h1
         a(href="#/") How We Die?
       ul
@@ -24,10 +24,12 @@ html(ng-app="app")
           a(href="#/transition") 年齢別死因割合の遷移
         li
           a(href="#/about") このサイトについて
-    div.reveal-animation(ng-view)
+    h1.fadein(ng-class="{'fadeout':h1Fadeout}",ng-show="show.h1") How We Die?
+
+    div.reveal-animation(ng-view,ng-show="show.view")
 
     //- amazonアフィ
-    .amazon(ng-if="amazonShow")
+    .amazon(ng-if="show.amazon")
         iframe(src="http://rcm-fe.amazon-adsystem.com/e/cm?t=itsanendlewor-22&o=9&p=48&l=st1&mode=books-jp&search=自殺&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0",marginheight="0",width="728",height="90",border="0",frameborder="0",style="border:none;",scrolling="no")
     //- ga
     script.

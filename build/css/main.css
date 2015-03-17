@@ -44,19 +44,20 @@ nav {
           color: rgba(255, 255, 255, 0.9);
           text-decoration: none; }
 
-.caution {
-  color: #B21717;
-  font-size: 200%;
-  font-weight: bold;
-  margin: 0 5px; }
-
-.top h1 {
+h1.fadein {
   font-family: 'Cabin Sketch', cursive;
   font-weight: 700;
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 300px;
   font-size: 100px; }
+
+.caution {
+  color: #B21717;
+  font-size: 200%;
+  font-weight: bold;
+  margin: 0 5px; }
+
 .top .top-main {
   width: 800px;
   padding: 40px;
@@ -166,6 +167,10 @@ nav {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   opacity: 1; }
+
+.top .top-main.fadein {
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s; }
 
 .fadeout {
   -webkit-animation-timing-function: ease-in;

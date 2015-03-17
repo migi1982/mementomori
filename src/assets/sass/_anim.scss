@@ -18,6 +18,9 @@
   animation-duration: 2s;
   opacity: 1;
 }
+.top .top-main.fadein {
+  animation-duration: .8s;
+}
 .fadeout {
   animation-timing-function: ease-in;
   animation-iteration-count: 1;

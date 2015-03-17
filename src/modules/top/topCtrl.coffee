@@ -1,12 +1,14 @@
 topCtrl = [
   '$rootScope'
   '$scope'
-  '$timeout'
   'dataService'
   'd3Service'
+  'showService'
   'util'
-  ($rootScope,$scope,$timeout,dataService,d3Service,util)->
-    $scope.showDiv = 'h1'
+  ($rootScope,$scope,dataService,d3Service,showService,util)->
+    showService.toggle('topQ',true)
+    showService.toggle('topA',false)
+
     data10 = data20 = null
     d3 = d3Service.d3
     c3 = d3Service.c3
@@ -18,12 +20,6 @@ topCtrl = [
       data20 = res
       return
 
-    $timeout ->
-      $scope.h1Fadeout = true
-      $timeout ->
-        $scope.showDiv = 'q'
-      , 1000
-    , 3000
     # $scope.showDiv = 'a'
     # $rootScope.navShow = true
 
@@ -44,8 +40,10 @@ topCtrl = [
         $scope.rankData = data20[index20]
         setDonut($scope.rankData[$scope.mySex])
         $scope.showDiv = 'a'
-        $rootScope.navShow = true
-        $rootScope.amazonShow = true
+        showService.toggle('nav',true)
+        showService.toggle('amazon',true)
+        showService.toggle('topQ')
+        showService.toggle('topA')
       return
 
     setDonut = (data)->
@@ -68,6 +66,10 @@ topCtrl = [
         }
       }
       return
+
+    $scope.showQ = ->
+      showService.toggle('topA')
+      showService.toggle('topQ')
 
 
     # $scope.setIcon = ->
