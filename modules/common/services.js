@@ -1,5 +1,5 @@
 (function() {
-  var d3Service, dataService, util;
+  var d3Service, dataService, showService, util;
 
   util = function() {
     var rnd;
@@ -33,6 +33,23 @@
     }
   ];
 
+  showService = [
+    '$rootScope', function($rootScope) {
+      var toggle;
+      $rootScope.show = {};
+      toggle = function(str, bool) {
+        if (bool != null) {
+          $rootScope.show[str] = bool;
+        } else {
+          $rootScope.show[str] = !$rootScope.show[str];
+        }
+      };
+      return {
+        toggle: toggle
+      };
+    }
+  ];
+
   d3Service = function() {
     return {
       d3: d3,
@@ -40,6 +57,6 @@
     };
   };
 
-  angular.module('services', ['ngRoute']).service('dataService', dataService).service('util', util).service('d3Service', d3Service);
+  angular.module('services', ['ngRoute']).service('dataService', dataService).service('util', util).service('d3Service', d3Service).service('showService', showService);
 
 }).call(this);

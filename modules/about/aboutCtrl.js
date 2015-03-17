@@ -2,8 +2,9 @@
   var aboutCtrl;
 
   aboutCtrl = [
-    '$rootScope', '$scope', function($rootScope, $scope) {
-      $rootScope.navShow = true;
+    '$rootScope', '$scope', 'showService', function($rootScope, $scope, showService) {
+      showService.toggle('nav', true);
+      showService.toggle('amazon', true);
     }
   ];
 

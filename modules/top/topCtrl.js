@@ -2,9 +2,10 @@
   var topCtrl;
 
   topCtrl = [
-    '$rootScope', '$scope', '$timeout', 'dataService', 'd3Service', 'util', function($rootScope, $scope, $timeout, dataService, d3Service, util) {
+    '$rootScope', '$scope', 'dataService', 'd3Service', 'showService', 'util', function($rootScope, $scope, dataService, d3Service, showService, util) {
       var c3, d3, data10, data20, setDonut;
-      $scope.showDiv = 'h1';
+      showService.toggle('topQ', true);
+      showService.toggle('topA', false);
       data10 = data20 = null;
       d3 = d3Service.d3;
       c3 = d3Service.c3;
@@ -14,12 +15,6 @@
       dataService('20').then(function(res) {
         data20 = res;
       });
-      $timeout(function() {
-        $scope.h1Fadeout = true;
-        return $timeout(function() {
-          return $scope.showDiv = 'q';
-        }, 1000);
-      }, 3000);
       $scope.setData = function() {
         var index10, index20;
         if ($scope.myAge >= 0 && $scope.mySex) {
@@ -37,8 +32,10 @@
           $scope.rankData = data20[index20];
           setDonut($scope.rankData[$scope.mySex]);
           $scope.showDiv = 'a';
-          $rootScope.navShow = true;
-          $rootScope.amazonShow = true;
+          showService.toggle('nav', true);
+          showService.toggle('amazon', true);
+          showService.toggle('topQ');
+          showService.toggle('topA');
         }
       };
       setDonut = function(data) {
@@ -63,6 +60,10 @@
             width: 480
           }
         });
+      };
+      $scope.showQ = function() {
+        showService.toggle('topA');
+        return showService.toggle('topQ');
       };
     }
   ];
