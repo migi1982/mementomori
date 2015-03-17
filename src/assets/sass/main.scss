@@ -7,6 +7,12 @@ body {
   margin: 0;
   background: none;
 }
+.amazon {
+  position:fixed;
+  bottom:0;
+  left:50%;
+  margin-left: -364px;
+}
 nav {
   position:absolute;
   top:0;
@@ -135,7 +141,7 @@ nav {
       .btn {
         margin: 20px auto;
         display: block;
-        width: 200px;
+        width: 300px;
       }
     }
   }

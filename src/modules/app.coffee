@@ -1,9 +1,9 @@
 importModules = [
   'ui.bootstrap'
   'ngRoute'
-  'ng.httpLoader'
+  'ngAnimate'
   'services'
-  'filters'
+  # 'filters'
 ]
 
 routeConfig = [
@@ -39,15 +39,8 @@ routeConfig = [
       }
     return
 ]
-loader = [
-  'httpMethodInterceptorProvider'
-  (httpMethodInterceptorProvider)->
-    httpMethodInterceptorProvider.whitelistDomain('github.io')
-#    httpMethodInterceptorProvider.whitelistDomain('vagrant.crazyark.com')
-    return
-]
 
 angular
   .module 'app', importModules
   .config routeConfig
-  .config loader
+  # .config loader

@@ -1,7 +1,7 @@
 (function() {
-  var importModules, loader, routeConfig;
+  var importModules, routeConfig;
 
-  importModules = ['ui.bootstrap', 'ngRoute', 'ng.httpLoader', 'services', 'filters'];
+  importModules = ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'services'];
 
   routeConfig = [
     '$routeProvider', function($routeProvider) {
@@ -35,12 +35,6 @@
     }
   ];
 
-  loader = [
-    'httpMethodInterceptorProvider', function(httpMethodInterceptorProvider) {
-      httpMethodInterceptorProvider.whitelistDomain('github.io');
-    }
-  ];
-
-  angular.module('app', importModules).config(routeConfig).config(loader);
+  angular.module('app', importModules).config(routeConfig);
 
 }).call(this);

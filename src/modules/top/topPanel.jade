@@ -15,14 +15,14 @@
           svg(width="21px",height="36px",viewBox="0 0 43 72")
             g(fill-rule="evenodd",fill="none")
               path(d="M21.5,61.5 L9.5,61.5 L21.5,61.5 L21.5,41.5 L21.5,61.5 Z M21.5,61.5 L34.5199928,61.5 L21.5,61.5 L21.5,71.0677185 L21.5,61.5 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z",stroke-width="3",stroke-linecap="round",stroke-linejoin="bevel",stroke="#FFFFFF")
-      .btn.btn-primary.btn-lg(ng-click="setData()") 先に進む
+      .btn.btn-primary.btn-lg(ng-click="setData()",ng-disabled="myAge<0||!mySex") 先に進む
 
     .top-main-a(ng-show="showDiv=='a'")
       p あなたは今年<span class="caution">{{rateData.rate[mySex]}}%</span>の確率で死亡します。
       p これは同世代の<span class="caution">{{rateData.num[mySex]|number}}人</span>に1人の確率です。
       p 死亡者の多くは<span class="caution">{{rankData[mySex][0].name}}</span>で死亡しています。
-      p この数字は統計局の人口動態調査の結果を元にした事実です。
+      p この数字は統計局の人口動態調査の結果を元にした<span class="caution">事実</span>です。
 
       #chart.top-chart
 
-      .btn.btn-default(ng-click="showDiv='q'") 別の年齢・性別でためす
+      .btn.btn-default(ng-click="showDiv='q'") 大切な人の年齢・性別でためす

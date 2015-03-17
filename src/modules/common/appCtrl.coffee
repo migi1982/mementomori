@@ -7,6 +7,8 @@ appCtrl = [
 ]
 
 
+ga = ->
+  templateUrl: 'modules/common/parts/_ga.html'
 
 
 
@@ -14,3 +16,4 @@ appCtrl = [
 angular
   .module 'app'
   .controller 'appCtrl',appCtrl
+  .directive 'ga', ga

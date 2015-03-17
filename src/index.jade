@@ -23,10 +23,15 @@ html(ng-app="app")
           a(href="#/transition") 年齢別死因割合の遷移
         li
           a(href="#/about") このサイトについて
-    div(ng-view)
+    div.reveal-animation(ng-view)
+
+    .amazon(ng-if="amazonShow")
+        iframe(src="http://rcm-fe.amazon-adsystem.com/e/cm?t=itsanendlewor-22&o=9&p=48&l=st1&mode=books-jp&search=自殺&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0",marginheight="0",width="728",height="90",border="0",frameborder="0",style="border:none;",scrolling="no")
+    ga
 
     script(src="lib/angular.min.js")
     script(src="lib/angular-route.min.js")
+    script(src="lib/angular-animate.min.js")
     script(src="lib/ui-bootstrap-tpls.min.js")
     script(src="lib/ui-layout.js")
     script(src="lib/angular-http-loader.min.js")

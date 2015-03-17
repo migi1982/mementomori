@@ -1,5 +1,5 @@
 (function() {
-  var appCtrl;
+  var appCtrl, ga;
 
   appCtrl = [
     '$rootScope', '$scope', function($rootScope, scope) {
@@ -7,6 +7,12 @@
     }
   ];
 
-  angular.module('app').controller('appCtrl', appCtrl);
+  ga = function() {
+    return {
+      templateUrl: 'modules/common/parts/_ga.html'
+    };
+  };
+
+  angular.module('app').controller('appCtrl', appCtrl).directive('ga', ga);
 
 }).call(this);
