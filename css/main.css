@@ -6,6 +6,12 @@ body {
   margin: 0;
   background: none; }
 
+.amazon {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -364px; }
+
 nav {
   position: absolute;
   top: 0;
@@ -105,7 +111,7 @@ nav {
   .top .top-main .top-main-a .btn {
     margin: 20px auto;
     display: block;
-    width: 200px; }
+    width: 300px; }
 
 .transition, .about {
   width: 800px;
@@ -125,6 +131,24 @@ nav {
       .transition ul.nav li.active, .about ul.nav li.active {
         background: #666;
         color: #fff; }
+
+.reveal-animation.ng-enter {
+  -webkit-animation: enter_sequence .8s ease-in;
+          animation: enter_sequence .8s ease-in; }
+
+@-webkit-keyframes enter_sequence {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes enter_sequence {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
 
 .fadein {
   -webkit-animation-timing-function: ease-in;

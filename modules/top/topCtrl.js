@@ -38,6 +38,7 @@
           setDonut($scope.rankData[$scope.mySex]);
           $scope.showDiv = 'a';
           $rootScope.navShow = true;
+          $rootScope.amazonShow = true;
         }
       };
       setDonut = function(data) {
