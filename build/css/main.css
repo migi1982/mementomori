@@ -122,12 +122,13 @@ nav {
   .transition ul.nav, .about ul.nav {
     border: 1px solid #999;
     height: 30px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin: 0 auto 20px; }
     .transition ul.nav li, .about ul.nav li {
-      line-height: 30px;
+      line-height: 28px;
       text-align: center;
-      border-radius: 4px; }
+      border-radius: 4px;
+      cursor: pointer; }
       .transition ul.nav li.active, .about ul.nav li.active {
         background: #666;
         color: #fff; }
