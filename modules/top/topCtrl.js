@@ -18,7 +18,6 @@
       $scope.setData = function() {
         var index10, index20;
         if ($scope.myAge >= 0 && $scope.mySex) {
-          console.log('set!');
           index10 = ($scope.myAge / 5) << 0;
           if (index10 > 20) {
             index10 = 20;
