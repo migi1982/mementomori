@@ -2,7 +2,7 @@
   var topCtrl;
 
   topCtrl = [
-    '$scope', 'dataService', 'd3Service', 'showService', function($scope, dataService, d3Service, showService) {
+    '$scope', 'dataService', 'd3Service', 'showService', 'numberFilter', function($scope, dataService, d3Service, showService, numberFilter) {
       var c3, d3, data10, data20, setDonut;
       showService.toggle('topQ', true);
       showService.toggle('topA', false);
@@ -68,6 +68,7 @@
       $scope.open_tweet_window = function() {
         var cause, number, text, url;
         number = $scope.rateData.num[$scope.mySex];
+        number = numberFilter(number);
         cause = $scope.rankData[$scope.mySex][0].name;
         text = "私は今年、1/" + number + "の確率で死にます。死因はおそらく" + cause + "です。 #HowWeDie";
         text = encodeURIComponent(text);

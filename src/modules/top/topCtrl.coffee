@@ -3,7 +3,8 @@ topCtrl = [
   'dataService'
   'd3Service'
   'showService'
-  ($scope,dataService,d3Service,showService)->
+  'numberFilter'
+  ($scope,dataService,d3Service,showService,numberFilter)->
     showService.toggle('topQ',true)
     showService.toggle('topA',false)
 
@@ -68,6 +69,7 @@ topCtrl = [
 
     $scope.open_tweet_window = ->
       number = $scope.rateData.num[$scope.mySex]
+      number = numberFilter number
       cause = $scope.rankData[$scope.mySex][0].name
       text = "私は今年、1/#{number}の確率で死にます。死因はおそらく#{cause}です。 #HowWeDie"
       text = encodeURIComponent text
