@@ -156,6 +156,48 @@ button.my-twitter-share-button {
   clear: both;
   display: block; }
 
+h1 a {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-name: "flash";
+          animation-name: "flash";
+  -webkit-animation-duration: 24.86211s;
+          animation-duration: 24.86211s;
+  color: #fff; }
+
+@-webkit-keyframes "flash" {
+  0% {
+    color: #fff; }
+
+  98% {
+    color: #fff; }
+
+  99% {
+    color: #B21717; }
+
+  100% {
+    color: #fff; } }
+
+@keyframes "flash" {
+  0% {
+    color: #fff; }
+
+  98% {
+    color: #fff; }
+
+  99% {
+    color: #B21717; }
+
+  100% {
+    color: #fff; } }
+
 .reveal-animation.ng-enter {
   -webkit-animation: enter_sequence .8s ease-in;
           animation: enter_sequence .8s ease-in; }

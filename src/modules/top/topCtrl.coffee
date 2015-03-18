@@ -21,7 +21,6 @@ topCtrl = [
 
     $scope.setData = ->
       if $scope.myAge >= 0 && $scope.mySex
-        console.log 'set!'
         # data10のインデックス
         index10 = ($scope.myAge / 5) << 0
         if index10 > 20

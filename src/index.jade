@@ -26,7 +26,7 @@ html(ng-app="app")
           a(href="#/about") このサイトについて
     h1.fadein(ng-class="{'fadeout':h1Fadeout}",ng-show="show.h1") How We Die?
 
-    div.reveal-animation(ng-view,ng-show="show.view")
+    div.view.reveal-animation(ng-view,ng-show="show.view")
 
     //- amazonアフィ
     .amazon(ng-if="show.amazon")
