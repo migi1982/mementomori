@@ -1,13 +1,11 @@
 aboutCtrl = [
-  '$rootScope'
   '$scope'
   'showService'
-  ($rootScope,$scope,showService)->
+  ($scope,showService)->
     showService.toggle('nav',true)
     showService.toggle('amazon',true)
     return
 ]
-
 
 angular
   .module 'app'

@@ -15,6 +15,22 @@ appCtrl = [
     return
 ]
 
+twitter = ->
+  {
+    link: (scope,element,attr)->
+      setTimeout ->
+        twttr.widgets.createShareButton(
+            attr.url
+            element[0]
+            (el)->
+              # none
+            {count: 'none', text: attr.text}
+          )
+        return
+      return
+  }
+
 angular
   .module 'app'
   .controller 'appCtrl',appCtrl
+  .directive 'twitter', twitter

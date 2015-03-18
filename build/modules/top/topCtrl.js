@@ -2,7 +2,7 @@
   var topCtrl;
 
   topCtrl = [
-    '$rootScope', '$scope', 'dataService', 'd3Service', 'showService', 'util', function($rootScope, $scope, dataService, d3Service, showService, util) {
+    '$scope', 'dataService', 'd3Service', 'showService', function($scope, dataService, d3Service, showService) {
       var c3, d3, data10, data20, setDonut;
       showService.toggle('topQ', true);
       showService.toggle('topA', false);
@@ -64,6 +64,15 @@
       $scope.showQ = function() {
         showService.toggle('topA');
         return showService.toggle('topQ');
+      };
+      $scope.open_tweet_window = function() {
+        var cause, number, text, url;
+        number = $scope.rateData.num[$scope.mySex];
+        cause = $scope.rankData[$scope.mySex][0].name;
+        text = "私は今年、1/" + number + "の確率で死にます。死因はおそらく" + cause + "です。 #HowWeDie";
+        text = encodeURIComponent(text);
+        url = 'https://twitter.com/share?text=' + text;
+        window.open(url, 'scrollbars=yes,width=500,height=300,');
       };
     }
   ];

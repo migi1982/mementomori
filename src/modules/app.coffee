@@ -3,7 +3,6 @@ importModules = [
   'ngRoute'
   'ngAnimate'
   'services'
-  # 'filters'
 ]
 
 routeConfig = [
@@ -43,4 +42,3 @@ routeConfig = [
 angular
   .module 'app', importModules
   .config routeConfig
-  # .config loader

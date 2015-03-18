@@ -168,60 +168,36 @@ h1.fadein {
       }
     }
   }
-  .c3-axis-x text {
-    // font:5px sans-serif;
-  }
 }
-// .icons svg {
-//   margin-right:5px;
-// }
-// .die {
-//   circle, polygon, path {
-//     animation-timing-function: ease-in;
-//     animation-iteration-count: 1;
-//     animation-delay: 0s;
-//     transform-origin: 50% 50%;
-//     animation-name: die;
-//     animation-duration: 4s;
-//     opacity: 0;
-//   }
-//   // animation-timing-function: ease-in;
-//   // animation-iteration-count: 1;
-//   // animation-delay: 0s;
-//   // transform-origin: 50% 50%;
-//   // animation-name: die;
-//   // animation-duration: 3s;
-//   // opacity: 0;
-// }
-// @keyframes die {
-//   0% {
-//     opacity: 1;
-//     fill: #000;
-//     trasnform: scale(1)
-//   }
-//   50% {
-//     opacity: 1;
-//     fill: #F00;
-//     trasnform: scale(2)
-//   }
-//   80% {
-//     opacity: 1;
-//     fill: #F00;
-//     trasnform: scale(2)
-//   }
-//   100% {
-//     opacity: 0;
-//     fill: #F00;
-//     trasnform: scale(2)
-//   }
-// }
-// p.full {
-//   width: 100%;
-// }
-@import '_anim';
+
+button.my-twitter-share-button {
+  display: block;
+  margin: 0 auto;
+  padding: 1px 3px 0 19px;
+
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  background: #f8f8f8 url(//twitter.com/favicons/favicon.ico) 2px 3px no-repeat;
+  background: url(//twitter.com/favicons/favicon.ico) 2px 3px no-repeat,
+              -webkit-linear-gradient(#fff, #dedede);
+  background: url(//twitter.com/favicons/favicon.ico) 2px 3px no-repeat,
+              linear-gradient(#fff, #dedede);
+  background-size: 16px 13px, auto auto;
+
+  /* Text */
+  font: bold 11px/17px Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+
+  white-space: nowrap;
+}
+
 
 .flc:after {
   content: "";
   clear: both;
   display: block;
 }
+
+@import '_anim';

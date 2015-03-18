@@ -1,11 +1,9 @@
 topCtrl = [
-  '$rootScope'
   '$scope'
   'dataService'
   'd3Service'
   'showService'
-  'util'
-  ($rootScope,$scope,dataService,d3Service,showService,util)->
+  ($scope,dataService,d3Service,showService)->
     showService.toggle('topQ',true)
     showService.toggle('topA',false)
 
@@ -19,9 +17,6 @@ topCtrl = [
     dataService('20').then (res)->
       data20 = res
       return
-
-    # $scope.showDiv = 'a'
-    # $rootScope.navShow = true
 
     $scope.setData = ->
       if $scope.myAge >= 0 && $scope.mySex
@@ -71,25 +66,17 @@ topCtrl = [
       showService.toggle('topA')
       showService.toggle('topQ')
 
+    $scope.open_tweet_window = ->
+      number = $scope.rateData.num[$scope.mySex]
+      cause = $scope.rankData[$scope.mySex][0].name
+      text = "私は今年、1/#{number}の確率で死にます。死因はおそらく#{cause}です。 #HowWeDie"
+      text = encodeURIComponent text
+      url = 'https://twitter.com/share?text=' + text
+      window.open(url,'scrollbars=yes,width=500,height=300,')
+      return
 
-    # $scope.setIcon = ->
-    #   if $scope.age && $scope.sex
-    #     $scope.icons = []
-    #     num = $scope.number[$scope.age][$scope.sex]
-    #     for i in [1..num]
-    #       $scope.icons.push {id:i,die:false}
-    #     $timeout ->
-    #       target = util.rnd(num*0.4,num*0.6) - 1
-    #       $scope.icons[target].die = true
-    #     , 1000
-    #   return
     return
 ]
-
-
-
-
-
 
 angular
   .module 'app'

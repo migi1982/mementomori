@@ -43,12 +43,10 @@ showService = [
 ]
 
 d3Service = ->
-  {
+  return {
     d3:d3
     c3:c3
   }
-
-
 
 angular
   .module 'services', ['ngRoute']
