@@ -1,5 +1,5 @@
 importModules = [
-  'ui.bootstrap'
+  # 'ui.bootstrap'
   'ngRoute'
   'ngAnimate'
   'services'

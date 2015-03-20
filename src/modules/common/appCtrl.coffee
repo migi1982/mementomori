@@ -1,10 +1,9 @@
 appCtrl = [
-  '$rootScope'
   '$scope'
   '$timeout'
   'showService'
   'd3Service'
-  ($rootScope,$scope,$timeout,showService,d3Service)->
+  ($scope,$timeout,showService,d3Service)->
 
     d3 = d3Service.d3
     c3 = d3Service.c3
@@ -21,6 +20,16 @@ appCtrl = [
     return
 ]
 
+amazon = ->
+  templateUrl: 'modules/common/parts/_amazon.html'
+ga = ->
+  templateUrl: 'modules/common/parts/_ga.html'
+header = ->
+  templateUrl: 'modules/common/parts/_header.html'
+
 angular
   .module 'app'
   .controller 'appCtrl',appCtrl
+  .directive 'amazon', amazon
+  .directive 'ga', ga
+  .directive 'header', header

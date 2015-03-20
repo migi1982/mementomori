@@ -4,7 +4,8 @@ lineCtrl = [
   'showService'
   'lineService'
   ($scope,dataService,showService,lineService)->
-    showService.show('nav')
+
+    showService.show('header')
     showService.show('amazon')
 
     data30 = data31 = null

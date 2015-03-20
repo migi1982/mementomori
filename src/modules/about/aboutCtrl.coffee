@@ -2,7 +2,7 @@ aboutCtrl = [
   '$scope'
   'showService'
   ($scope,showService)->
-    showService.show('nav')
+    showService.show('header')
     showService.show('amazon')
     return
 ]

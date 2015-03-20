@@ -1,7 +1,7 @@
 (function() {
   var importModules, routeConfig;
 
-  importModules = ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'services'];
+  importModules = ['ngRoute', 'ngAnimate', 'services'];
 
   routeConfig = [
     '$routeProvider', function($routeProvider) {

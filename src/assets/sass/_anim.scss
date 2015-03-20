@@ -1,4 +1,4 @@
-h1 a {
+.flash {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-delay: 0s;
@@ -13,10 +13,10 @@ h1 a {
   0% {
     color: #fff;
   }
-  98% {
+  94% {
     color: #fff;
   }
-  99% {
+  95% {
     color: #B21717;
   }
   100% {
@@ -70,5 +70,24 @@ h1 a {
   }
   100% {
     opacity: 0;
+  }
+}
+.icon-sex.on {
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  animation-name: "pop";
+  animation-duration: .3s;
+}
+@keyframes "pop" {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

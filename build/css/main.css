@@ -106,7 +106,7 @@ h1.fadein {
     width: 320px; }
   .top .top-main .top-main-a p {
     text-align: center; }
-  .top .top-main .top-main-a .top-chart {
+  .top .top-main .top-main-a .top-pie {
     width: 480px;
     margin: 20px auto; }
   .top .top-main .top-main-a .btn {
@@ -158,7 +158,7 @@ button.my-twitter-share-button {
   clear: both;
   display: block; }
 
-h1 a {
+.flash {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -178,10 +178,10 @@ h1 a {
   0% {
     color: #fff; }
 
-  98% {
+  94% {
     color: #fff; }
 
-  99% {
+  95% {
     color: #B21717; }
 
   100% {
@@ -191,10 +191,10 @@ h1 a {
   0% {
     color: #fff; }
 
-  98% {
+  94% {
     color: #fff; }
 
-  99% {
+  95% {
     color: #B21717; }
 
   100% {
@@ -281,3 +281,44 @@ h1 a {
 
   100% {
     opacity: 0; } }
+
+.icon-sex.on {
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-name: "pop";
+          animation-name: "pop";
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s; }
+
+@-webkit-keyframes "pop" {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes "pop" {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }

@@ -17,6 +17,8 @@ topCtrl = [
       return
 
     $scope.showQ = ->
+      $scope.myAge = null
+      $scope.mySex = null
       showService.hide('topA')
       showService.show('topQ')
 
@@ -36,7 +38,7 @@ topCtrl = [
         $scope.rankData = data20[index20]
         topService.setDonut($scope.rankData[$scope.mySex])
 
-        showService.show('nav')
+        showService.show('header')
         showService.show('amazon')
         showService.hide('topQ')
         showService.show('topA')
@@ -57,7 +59,7 @@ topService = [
       for item in data
         newData.push [item.name,item.rate]
       chart = c3.generate {
-        bindto: '#chart'
+        bindto: '#pie'
         data: {
           columns: newData
           type: 'donut'
