@@ -3,13 +3,13 @@
   animation-iteration-count: infinite;
   animation-delay: 0s;
   transform-origin: 50% 50%;
-  animation-name: "flash";
+  animation-name: flash;
   // 年間死亡者数1,268,436人
   // 365*24*60*60 / 1268436 = 24.862113658
   animation-duration: 24.862113658s;
   color: #fff;
 }
-@keyframes "flash" {
+@keyframes flash {
   0% {
     color: #fff;
   }
@@ -40,7 +40,7 @@
   animation-iteration-count: 1;
   animation-delay: 0s;
   transform-origin: 50% 50%;
-  animation-name: "fadein";
+  animation-name: fadein;
   animation-duration: 2s;
   opacity: 1;
 }
@@ -52,11 +52,11 @@
   animation-iteration-count: 1;
   animation-delay: 0s;
   transform-origin: 50% 50%;
-  animation-name: "fadeout";
+  animation-name: fadeout;
   animation-duration: 1s;
   opacity: 0;
 }
-@keyframes "fadein" {
+@keyframes fadein {
   0% {
     opacity: 0;
   }
@@ -64,7 +64,7 @@
     opacity: 1;
   }
 }
-@keyframes "fadeout" {
+@keyframes fadeout {
   0% {
     opacity: 1;
   }
@@ -77,10 +77,10 @@
   animation-iteration-count: 1;
   animation-delay: 0s;
   transform-origin: 50% 50%;
-  animation-name: "pop";
+  animation-name: pop;
   animation-duration: .3s;
 }
-@keyframes "pop" {
+@keyframes pop {
   0% {
     transform: scale(1);
   }

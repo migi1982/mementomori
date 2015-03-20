@@ -168,13 +168,13 @@ button.my-twitter-share-button {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-animation-name: "flash";
-          animation-name: "flash";
+  -webkit-animation-name: flash;
+          animation-name: flash;
   -webkit-animation-duration: 24.86211s;
           animation-duration: 24.86211s;
   color: #fff; }
 
-@-webkit-keyframes "flash" {
+@-webkit-keyframes flash {
   0% {
     color: #fff; }
 
@@ -187,7 +187,7 @@ button.my-twitter-share-button {
   100% {
     color: #fff; } }
 
-@keyframes "flash" {
+@keyframes flash {
   0% {
     color: #fff; }
 
@@ -228,8 +228,8 @@ button.my-twitter-share-button {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-animation-name: "fadein";
-          animation-name: "fadein";
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   opacity: 1; }
@@ -248,34 +248,34 @@ button.my-twitter-share-button {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-animation-name: "fadeout";
-          animation-name: "fadeout";
+  -webkit-animation-name: fadeout;
+          animation-name: fadeout;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   opacity: 0; }
 
-@-webkit-keyframes "fadein" {
+@-webkit-keyframes fadein {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
 
-@keyframes "fadein" {
+@keyframes fadein {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
 
-@-webkit-keyframes "fadeout" {
+@-webkit-keyframes fadeout {
   0% {
     opacity: 1; }
 
   100% {
     opacity: 0; } }
 
-@keyframes "fadeout" {
+@keyframes fadeout {
   0% {
     opacity: 1; }
 
@@ -292,12 +292,12 @@ button.my-twitter-share-button {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-animation-name: "pop";
-          animation-name: "pop";
+  -webkit-animation-name: pop;
+          animation-name: pop;
   -webkit-animation-duration: .3s;
           animation-duration: .3s; }
 
-@-webkit-keyframes "pop" {
+@-webkit-keyframes pop {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1); }
@@ -310,7 +310,7 @@ button.my-twitter-share-button {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
-@keyframes "pop" {
+@keyframes pop {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1); }
