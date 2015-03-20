@@ -37,6 +37,7 @@ topCtrl = [
         $scope.rateData = data10[index10]
         $scope.rankData = data20[index20]
         topService.setDonut($scope.rankData[$scope.mySex])
+        topService.sendGAEvent($scope.myAge,$scope.mySex)
 
         showService.show('header')
         showService.show('amazon')
@@ -53,7 +54,8 @@ topCtrl = [
 
 topService = [
   'numberFilter'
-  (numberFilter)->
+  '$analytics'
+  (numberFilter,$analytics)->
     setDonut = (data)->
       newData = []
       for item in data
@@ -83,9 +85,17 @@ topService = [
       window.open(url,'scrollbars=yes,width=500,height=300,')
       return
 
+    sendGAEvent = (age,sex)->
+      $analytics.eventTrack 'CheckDieRate', {
+        "age": age
+        "sex": sex
+      }
+      return
+
     {
       setDonut: setDonut
       openTweetWindow: openTweetWindow
+      sendGAEvent: sendGAEvent
     }
 ]
 
