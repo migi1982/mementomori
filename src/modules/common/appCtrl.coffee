@@ -22,8 +22,6 @@ appCtrl = [
 
 amazon = ->
   templateUrl: 'modules/common/parts/amazon.html'
-ga = ->
-  templateUrl: 'modules/common/parts/ga.html'
 header = ->
   templateUrl: 'modules/common/parts/header.html'
 
@@ -31,5 +29,4 @@ angular
   .module 'app'
   .controller 'appCtrl',appCtrl
   .directive 'amazon', amazon
-  .directive 'ga', ga
   .directive 'header', header

@@ -26,6 +26,8 @@ html(ng-app="app")
     script(src="lib/angular-animate.min.js")
     script(src="lib/d3.v3.min.js")
     script(src="lib/c3.min.js")
+    script(src="lib/angulartics.js")
+    script(src="lib/angulartics-ga.js")
 
     script(src="modules/app.js")
     script(src="modules/common/services.js")
@@ -41,4 +43,4 @@ html(ng-app="app")
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-3249547-7', 'auto');
-      ga('send', 'pageview');
+      //- ga('send', 'pageview');

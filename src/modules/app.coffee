@@ -1,8 +1,9 @@
 importModules = [
-  # 'ui.bootstrap'
   'ngRoute'
   'ngAnimate'
   'services'
+  'angulartics'
+  'angulartics.google.analytics'
 ]
 
 routeConfig = [
