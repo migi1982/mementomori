@@ -14,6 +14,8 @@
         data20 = res;
       });
       $scope.showQ = function() {
+        $scope.myAge = null;
+        $scope.mySex = null;
         showService.hide('topA');
         return showService.show('topQ');
       };
@@ -32,7 +34,7 @@
           $scope.rateData = data10[index10];
           $scope.rankData = data20[index20];
           topService.setDonut($scope.rankData[$scope.mySex]);
-          showService.show('nav');
+          showService.show('header');
           showService.show('amazon');
           showService.hide('topQ');
           showService.show('topA');
@@ -55,7 +57,7 @@
           newData.push([item.name, item.rate]);
         }
         chart = c3.generate({
-          bindto: '#chart',
+          bindto: '#pie',
           data: {
             columns: newData,
             type: 'donut',

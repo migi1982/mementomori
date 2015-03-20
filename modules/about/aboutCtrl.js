@@ -3,7 +3,7 @@
 
   aboutCtrl = [
     '$scope', 'showService', function($scope, showService) {
-      showService.show('nav');
+      showService.show('header');
       showService.show('amazon');
     }
   ];

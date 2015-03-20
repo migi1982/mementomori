@@ -4,7 +4,7 @@
   lineCtrl = [
     '$scope', 'dataService', 'showService', 'lineService', function($scope, dataService, showService, lineService) {
       var chart, data30, data31, setChart, updateChart;
-      showService.show('nav');
+      showService.show('header');
       showService.show('amazon');
       data30 = data31 = null;
       $scope.type = 'rate';

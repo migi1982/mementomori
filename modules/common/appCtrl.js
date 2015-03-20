@@ -1,8 +1,8 @@
 (function() {
-  var appCtrl;
+  var amazon, appCtrl, ga, header;
 
   appCtrl = [
-    '$rootScope', '$scope', '$timeout', 'showService', 'd3Service', function($rootScope, $scope, $timeout, showService, d3Service) {
+    '$scope', '$timeout', 'showService', 'd3Service', function($scope, $timeout, showService, d3Service) {
       var c3, d3;
       d3 = d3Service.d3;
       c3 = d3Service.c3;
@@ -17,6 +17,24 @@
     }
   ];
 
-  angular.module('app').controller('appCtrl', appCtrl);
+  amazon = function() {
+    return {
+      templateUrl: 'modules/common/parts/_amazon.html'
+    };
+  };
+
+  ga = function() {
+    return {
+      templateUrl: 'modules/common/parts/_ga.html'
+    };
+  };
+
+  header = function() {
+    return {
+      templateUrl: 'modules/common/parts/_header.html'
+    };
+  };
+
+  angular.module('app').controller('appCtrl', appCtrl).directive('amazon', amazon).directive('ga', ga).directive('header', header);
 
 }).call(this);
