@@ -19,13 +19,13 @@
 
   amazon = function() {
     return {
-      templateUrl: 'modules/common/parts/_amazon.html'
+      templateUrl: 'modules/common/parts/amazon.html'
     };
   };
 
   ga = function() {
     return {
-      templateUrl: 'modules/common/parts/_ga.html'
+      templateUrl: 'modules/common/parts/ga.html'
     };
   };
 
