@@ -31,7 +31,7 @@
 
   header = function() {
     return {
-      templateUrl: 'modules/common/parts/_header.html'
+      templateUrl: 'modules/common/parts/header.html'
     };
   };
 
