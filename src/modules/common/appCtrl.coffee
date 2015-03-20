@@ -25,7 +25,7 @@ amazon = ->
 ga = ->
   templateUrl: 'modules/common/parts/_ga.html'
 header = ->
-  templateUrl: 'modules/common/parts/_header.html'
+  templateUrl: 'modules/common/parts/header.html'
 
 angular
   .module 'app'
