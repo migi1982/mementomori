@@ -1,7 +1,7 @@
 (function() {
   var importModules, routeConfig;
 
-  importModules = ['ngRoute', 'ngAnimate', 'services'];
+  importModules = ['ngRoute', 'ngAnimate', 'services', 'angulartics', 'angulartics.google.analytics'];
 
   routeConfig = [
     '$routeProvider', function($routeProvider) {
