@@ -14,7 +14,7 @@ body {
   margin-left: -364px;
 }
 nav {
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   width: 100%;
@@ -146,12 +146,15 @@ h1.fadein {
     }
   }
 }
-.transition,.about {
+.line,.about {
   width: 800px;
   padding: 40px;
   margin: 100px auto;
   border-radius: 2px;
   background: rgba(255,255,255,.8);
+  p.title {
+    text-align: center;
+  }
   ul.nav {
     border: 1px solid #999;
     height: 30px;

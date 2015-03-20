@@ -4,6 +4,8 @@ h1 a {
   animation-delay: 0s;
   transform-origin: 50% 50%;
   animation-name: "flash";
+  // 年間死亡者数1,268,436人
+  // 365*24*60*60 / 1268436 = 24.862113658
   animation-duration: 24.862113658s;
   color: #fff;
 }

@@ -13,12 +13,12 @@
             return $rootScope.currentPage = 'top';
           }
         }
-      }).when('/transition', {
-        controller: 'transitionCtrl',
-        templateUrl: 'modules/transition/transitionPanel.html',
+      }).when('/line', {
+        controller: 'lineCtrl',
+        templateUrl: 'modules/line/linePanel.html',
         resolve: {
           current: function($rootScope) {
-            return $rootScope.currentPage = 'transition';
+            return $rootScope.currentPage = 'line';
           }
         }
       }).when('/about', {

@@ -13,7 +13,7 @@ body {
   margin-left: -364px; }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,23 +114,25 @@ h1.fadein {
     display: block;
     width: 300px; }
 
-.transition, .about {
+.line, .about {
   width: 800px;
   padding: 40px;
   margin: 100px auto;
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.8); }
-  .transition ul.nav, .about ul.nav {
+  .line p.title, .about p.title {
+    text-align: center; }
+  .line ul.nav, .about ul.nav {
     border: 1px solid #999;
     height: 30px;
     border-radius: 6px;
     margin: 0 auto 20px; }
-    .transition ul.nav li, .about ul.nav li {
+    .line ul.nav li, .about ul.nav li {
       line-height: 28px;
       text-align: center;
       border-radius: 4px;
       cursor: pointer; }
-      .transition ul.nav li.active, .about ul.nav li.active {
+      .line ul.nav li.active, .about ul.nav li.active {
         background: #666;
         color: #fff; }
 

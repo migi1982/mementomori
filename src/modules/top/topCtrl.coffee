@@ -1,23 +1,24 @@
 topCtrl = [
   '$scope'
   'dataService'
-  'd3Service'
   'showService'
-  'numberFilter'
-  ($scope,dataService,d3Service,showService,numberFilter)->
-    showService.toggle('topQ',true)
-    showService.toggle('topA',false)
+  'topService'
+  ($scope,dataService,showService,topService)->
+    showService.show('topQ')
+    showService.hide('topA')
 
     data10 = data20 = null
-    d3 = d3Service.d3
-    c3 = d3Service.c3
 
-    dataService('10').then (res)->
+    dataService('deathRate').then (res)->
       data10 = res
       return
-    dataService('20').then (res)->
+    dataService('deathRank').then (res)->
       data20 = res
       return
+
+    $scope.showQ = ->
+      showService.hide('topA')
+      showService.show('topQ')
 
     $scope.setData = ->
       if $scope.myAge >= 0 && $scope.mySex
@@ -33,14 +34,24 @@ topCtrl = [
         # スコープにインデックスを適用
         $scope.rateData = data10[index10]
         $scope.rankData = data20[index20]
-        setDonut($scope.rankData[$scope.mySex])
-        $scope.showDiv = 'a'
-        showService.toggle('nav',true)
-        showService.toggle('amazon',true)
-        showService.toggle('topQ')
-        showService.toggle('topA')
+        topService.setDonut($scope.rankData[$scope.mySex])
+
+        showService.show('nav')
+        showService.show('amazon')
+        showService.hide('topQ')
+        showService.show('topA')
       return
 
+    $scope.openTweetWindow = ->
+      topService.openTweetWindow($scope.rateData.num[$scope.mySex], $scope.rankData[$scope.mySex][0].name)
+      return
+
+    return
+]
+
+topService = [
+  'numberFilter'
+  (numberFilter)->
     setDonut = (data)->
       newData = []
       for item in data
@@ -62,23 +73,21 @@ topCtrl = [
       }
       return
 
-    $scope.showQ = ->
-      showService.toggle('topA')
-      showService.toggle('topQ')
-
-    $scope.open_tweet_window = ->
-      number = $scope.rateData.num[$scope.mySex]
+    openTweetWindow = (number,cause)->
       number = numberFilter number
-      cause = $scope.rankData[$scope.mySex][0].name
       text = "私は今年、1/#{number}の確率で死にます。死因はおそらく#{cause}です。 #HowWeDie"
       text = encodeURIComponent text
       url = 'https://twitter.com/share?text=' + text
       window.open(url,'scrollbars=yes,width=500,height=300,')
       return
 
-    return
+    {
+      setDonut: setDonut
+      openTweetWindow: openTweetWindow
+    }
 ]
 
 angular
   .module 'app'
   .controller 'topCtrl',topCtrl
+  .service 'topService', topService

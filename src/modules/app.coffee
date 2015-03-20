@@ -17,12 +17,12 @@ routeConfig = [
             $rootScope.currentPage = 'top'
         }
       }
-      .when '/transition', {
-        controller: 'transitionCtrl',
-        templateUrl: 'modules/transition/transitionPanel.html'
+      .when '/line', {
+        controller: 'lineCtrl',
+        templateUrl: 'modules/line/linePanel.html'
         resolve: {
           current: ($rootScope)->
-            $rootScope.currentPage = 'transition'
+            $rootScope.currentPage = 'line'
         }
       }
       .when '/about', {
