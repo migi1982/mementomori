@@ -21,9 +21,9 @@ appCtrl = [
 ]
 
 amazon = ->
-  templateUrl: 'modules/common/parts/_amazon.html'
+  templateUrl: 'modules/common/parts/amazon.html'
 ga = ->
-  templateUrl: 'modules/common/parts/_ga.html'
+  templateUrl: 'modules/common/parts/ga.html'
 header = ->
   templateUrl: 'modules/common/parts/header.html'
 
