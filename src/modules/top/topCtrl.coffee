@@ -87,8 +87,8 @@ topService = [
 
     sendGAEvent = (age,sex)->
       $analytics.eventTrack 'CheckDieRate', {
-        "label": age
-        "category": sex
+        "category": sex + ''
+        "label": age + ''
       }
       return
 
