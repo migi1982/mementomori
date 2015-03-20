@@ -82,10 +82,7 @@
         window.open(url, 'scrollbars=yes,width=500,height=300,');
       };
       sendGAEvent = function(age, sex) {
-        $analytics.eventTrack('CheckDieRate', {
-          "age": age,
-          "sex": sex
-        });
+        ga('send', 'event', 'button', 'click', sex, age);
       };
       return {
         setDonut: setDonut,
