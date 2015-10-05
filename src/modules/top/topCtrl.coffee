@@ -38,6 +38,7 @@ topCtrl = [
         $scope.rankData = data20[index20]
         topService.setDonut($scope.rankData[$scope.mySex])
         topService.sendGAEvent($scope.myAge,$scope.mySex)
+        topService.sendMPEvent()
 
         showService.show('header')
         showService.show('amazon')
@@ -93,10 +94,15 @@ topService = [
       # }
       return
 
+    sendMPEvent = ->
+      mixpanel.track('check')
+      return
+
     {
       setDonut: setDonut
       openTweetWindow: openTweetWindow
       sendGAEvent: sendGAEvent
+      sendMPEvent: sendMPEvent
     }
 ]
 
