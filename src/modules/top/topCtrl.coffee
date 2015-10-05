@@ -47,7 +47,10 @@ topCtrl = [
       return
 
     $scope.openTweetWindow = ->
-      topService.openTweetWindow($scope.rateData.num[$scope.mySex], $scope.rankData[$scope.mySex][0].name)
+      topService.openTweetWindow(
+        $scope.rateData.num[$scope.mySex],
+        $scope.rankData[$scope.mySex][0].name
+      )
       return
 
     return
