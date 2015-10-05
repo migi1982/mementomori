@@ -35,6 +35,7 @@
           $scope.rankData = data20[index20];
           topService.setDonut($scope.rankData[$scope.mySex]);
           topService.sendGAEvent($scope.myAge, $scope.mySex);
+          topService.sendMPEvent();
           showService.show('header');
           showService.show('amazon');
           showService.hide('topQ');
@@ -49,7 +50,7 @@
 
   topService = [
     'numberFilter', '$analytics', function(numberFilter, $analytics) {
-      var openTweetWindow, sendGAEvent, setDonut;
+      var openTweetWindow, sendGAEvent, sendMPEvent, setDonut;
       setDonut = function(data) {
         var chart, i, item, len, newData;
         newData = [];
@@ -84,10 +85,14 @@
       sendGAEvent = function(age, sex) {
         ga('send', 'event', 'button', 'CheckDieRate', sex, age);
       };
+      sendMPEvent = function() {
+        mixpanel.track('check');
+      };
       return {
         setDonut: setDonut,
         openTweetWindow: openTweetWindow,
-        sendGAEvent: sendGAEvent
+        sendGAEvent: sendGAEvent,
+        sendMPEvent: sendMPEvent
       };
     }
   ];
